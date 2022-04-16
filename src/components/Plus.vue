@@ -1,7 +1,7 @@
 <template>
   <section id="plus">
     <v-container fluid>
-      <v-row align="center" justify="center" v-for="p in plus" :key="p.id">
+      <v-row align="center">
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col sm="4" class="hidden-xs-only">
@@ -39,16 +39,9 @@
 </template>
 
 <script>
-import { db } from "../firebase/db";
+
 export default {
-  data() {
-    return{
-      plus: []
-    }
-  },
-  firestore: {
-    plus: db.collection("plus"),
-  },
+
 };
 </script>
 

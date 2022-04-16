@@ -22,13 +22,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app :flat="flat" class="nav-i" :class="{ expand: flat }">
-      <v-toolbar-title>
-        <v-img
-          src="@/assets/img/logo-lock.0508bfe3.webp"
-          width="120px"
-          class="logo-1"
-        />
-      </v-toolbar-title>
+      <h1 class="titulo-nav">VICTOR ZAMORA</h1>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
@@ -40,10 +34,10 @@
           <span class="mr-3">Inicio</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#about')">
-          <span class="mr-3">Sobre Nosotros</span>
+          <span class="mr-3">Sobre Mi</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#informacion')">
-          <span class="mr-3">Información</span>
+          <span class="mr-3">Proyectos</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#planes')">
           <span class="mr-3">Planes</span>
@@ -67,8 +61,8 @@ export default {
     isXs: false,
     items: [
       ["mdi-home-outline", "Inicio", "#hero"],
-      ["mdi-information-outline", "Sobre Nosotros", "#about"],
-      ["mdi-web", "Información", "#informacion"],
+      ["mdi-information-outline", "Sobre Mi", "#about"],
+      ["mdi-web", "Proyectos", "#informacion"],
       ["mdi-currency-usd", "Planes", "#planes"],
       ["mdi-email-outline", "Contacto", "#contacto"],
     ],
@@ -104,13 +98,28 @@ export default {
 </script>
 
 <style>
-body.dark .nav-i {
-  background-color: #2e2bff !important;
+
+.nav-i {
+  background-color: rgb(94, 30, 0) !important;
+  color: #fff;
+}
+.nav-i span {
+  color: #fff;
 }
 body.dark .nav-i span {
   color: #fff;
 }
-
+body.dark .nav-i {
+  background-color: rgb(0, 12, 117) !important;
+}
+.titulo-nav{
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+}
+body.dark .titulo-nav{
+  color: #fff;
+}
 .nav-i .switch {
   background: #343d5b;
   border-radius: 1000px;

@@ -5,12 +5,8 @@
       <Header />
       <HomeSection />
       <About />
+      <Habilidades/>
       <Plus />
-      <Presentacion />
-      <Testimoniales />
-      <Empresas />
-      <!-- <Planes /> -->
-      <Planes2 />
       <Contacto />
     </div>
     <v-scale-transition>
@@ -34,16 +30,14 @@
 
 <script>
 import Header from "./components/Header.vue";
-import HomeSection from "./components/HomeSection";
+import HomeSection from "./components/HomeSection.vue";
 import About from "./components/About.vue";
 import Plus from "./components/Plus.vue";
-// import Planes from "./components/Planes.vue";
-import Planes2 from "./components/Planes2.vue";
+
 import foote from "./components/Footer.vue";
-import Testimoniales from "./components/Testimoniales.vue";
-import Empresas from "./components/Empresas.vue";
-import Presentacion from "./components/Presentacion.vue";
-import Contacto from "./components/Contacto";
+
+import Contacto from "./components/Contacto.vue";
+import Habilidades from "./components/Habilidades";
 
 export default {
   name: "App",
@@ -54,14 +48,10 @@ export default {
     HomeSection,
     About,
     Plus,
-    Presentacion,
-    Testimoniales,
-    Empresas,
-    // Planes,
-    Planes2,
     foote,
     Contacto,
-  },
+    Habilidades
+},
 
   data: () => ({
     fab: null,
@@ -104,9 +94,19 @@ export default {
 
 <style scoped>
 .fondo {
-  background-color: #fff;
+  background: rgb(255, 153, 0);
+  background: linear-gradient(
+    93deg,
+    rgba(255, 153, 0, 1) 0%,
+    rgba(255, 252, 42, 1) 100%
+  );
 }
 body.dark .fondo {
-  background-color: #2e2bff;
+  background: rgb(7, 0, 255);
+  background: linear-gradient(
+    93deg,
+    rgba(7, 0, 255, 1) 0%,
+    rgba(42, 211, 255, 1) 100%
+  );
 }
 </style>

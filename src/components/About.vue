@@ -1,71 +1,56 @@
 <template>
-  <section id="about">
-    
-      <div class="contenedor">
-        <div class="content">
-          <div class="centrar" v-for="a in sobre" :key="a.id">
-            <h1 style="font-size: 35px">{{ a.titulo }}</h1>
-            <p class="mt-8 justify">
-              {{ a.descripcion }}
-            </p>
-          </div>
-          <div class="centrar-2 mt-6">
-            <img
-              src="../assets/img/undraw_secure_login_pdn4.svg"
-              alt=""
-              width="100%"
-            />
-          </div>
-        </div>
+  <div class="sobre-mi">
+    <div class="contenedor">
+      <div class="content">
+        <h1 style="font-size: 45px">Sobre Mi</h1>
+        <p>Hola! Recientemente egrese de ingeniería en informática en el instituto Duoc UC, Sede San Bernardo. Me gusta la programación y todo lo relacionado con la tecnología, aprendo algo nuevo cada día para así ser mejor profesional y mejor persona, con ello, poder enfrentar los desafios de hoy y del mañana. Mi visión en convertirme en programador Full-Stack. Me considero una persona comprometida, autónomo y dinámico.</p>
       </div>
-  
-  </section>
+      
+        <img src="../assets/img/img-sobre-mi.png" alt="" width="40%" />
+      
+    </div>
+  </div>
 </template>
 
 <script>
-import { db } from "../firebase/db";
-export default {
-  data() {
-    return{
-      sobre: []
-    }
-  },
-  firestore: {
-    sobre: db.collection("about"),
-  },
-};
+export default {};
 </script>
 
 <style scoped>
-#about {
-  margin-top: 100px;
-  background-color: #f3f3f3;
-}
-
-.justify {
-  text-align: justify;
-}
-.contenedor {
+.sobre-mi {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+
+.contenedor {
+  width: 90%;
+  display: flex;
   align-items: center;
-  padding: 50px 0;
+  background: rgb(255, 153, 0);
+  background: linear-gradient(
+    93deg,
+    rgba(255, 153, 0, 1) 0%,
+    rgba(255, 252, 42, 1) 100%
+  );
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 50px 50px;
+  padding: 20px;
 }
 body.dark .contenedor {
-  background-color: #0300c2;
+  background: rgb(7,0,255);
+background: linear-gradient(93deg, rgba(7,0,255,1) 0%, rgba(42,211,255,1) 100%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
 }
-.content {
-  width: 81%;
+.content{
+  
+
   margin: 0;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  color: black;
-  padding: 30px 30px;
 }
-body.dark .content {
-  color: #fff;
+.content p{
+  font-size: 17px;
 }
 
 @media screen and (max-width: 968px) {
