@@ -22,11 +22,11 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app :flat="flat" class="nav-i" :class="{ expand: flat }">
-      <h1 class="titulo-nav">VICTOR ZAMORA</h1>
+      <h1 class="titulo-nav">V.D.Z.C DEV</h1>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
-        class="mr-4"
+        class="ml-8"
         v-if="isXs"
       />
       <div v-else>
@@ -100,7 +100,7 @@ export default {
 <style>
 
 .nav-i {
-  background-color: rgb(94, 30, 0) !important;
+  background-color: rgba(59, 54, 51, 0.212) !important;
   color: #fff;
 }
 .nav-i span {
@@ -110,7 +110,7 @@ body.dark .nav-i span {
   color: #fff;
 }
 body.dark .nav-i {
-  background-color: rgb(0, 12, 117) !important;
+  background-color: rgba(59, 54, 51, 0.212) !important;
 }
 .titulo-nav{
   font-size: 30px;

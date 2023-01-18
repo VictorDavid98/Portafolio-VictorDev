@@ -1,33 +1,66 @@
 <template>
-    <div class="contenedor-h">
-        <div class="habilidades"></div>
+  <div class="habilidades">
+    <div class="contenedor">
+      <div class="content">
+        <h1 style="font-size: 45px">Sobre Mi</h1>
+        <p>
+          Mi portafolio web es una colección de mis mejores trabajos en diseño gráfico y desarrollo web. Incluye proyectos como diseño de logotipos, carteles publicitarios, sitios web y aplicaciones móviles que muestran mi creatividad y habilidades técnicas. Además, proporciona detalles sobre mi experiencia y conocimientos en herramientas y tecnologías relacionadas. Es una excelente herramienta para mostrar mi trabajo a potenciales clientes y empleadores, y para diferenciarme de la competencia.
+        </p>
+      </div>
+
+      <img src="../assets/img/img-sobre-mi.png" alt="" width="40%" />
     </div>
+  </div>
 </template>
+
 <script>
-
-
-export default({
-
-})
+export default {};
 </script>
+
 <style scoped>
-.contenedor-h{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.habilidades {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(147, 11, 238) 0%,
+    rgb(177, 177, 177) 65%
+  );
+ 
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-.habilidades{
-    width: 90%;
+body.dark .habilidades {
+  background: rgb(0, 17, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 17, 255, 1) 0%,
+    rgb(1, 238, 255) 65%
+  );
+}
+
+.contenedor {
+  width: 65%;
   display: flex;
   align-items: center;
-  background: rgb(255, 153, 0);
-  background: linear-gradient(
-    93deg,
-    rgba(255, 153, 0, 1) 0%,
-    rgba(255, 252, 42, 1) 100%
-  );
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   margin: 50px 50px;
-  padding: 20px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.content {
+  margin: 0;
+}
+.content p {
+  font-size: 19px;
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 </style>

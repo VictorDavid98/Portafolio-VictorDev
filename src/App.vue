@@ -94,11 +94,11 @@ export default {
 
 <style scoped>
 .fondo {
-  background: rgb(255, 153, 0);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-    93deg,
-    rgba(255, 153, 0, 1) 0%,
-    rgba(255, 252, 42, 1) 100%
+    45deg,
+    rgb(147, 11, 238) 0%,
+    rgb(177, 177, 177) 95%
   );
 }
 body.dark .fondo {

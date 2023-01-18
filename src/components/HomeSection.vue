@@ -1,11 +1,11 @@
 <template>
   <section id="hero">
-    <div>
+
       <div class="background-i">
         <div class="content-hero">
           <div class="content">
             <h1 class="titulo mb-5">
-              ¡Hola! me llamo Víctor Zamora, soy <br>
+              ¡HOLA! Me llamo Víctor Zamora, soy <br>
               <span class="typed-text font-weight-bold">{{ typeValue }}</span>
               <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
             </h1>
@@ -18,10 +18,10 @@
                 large
                 dark
                 @click="$vuetify.goTo('#features')"
-                class="mt-6"
+                class="mt-7 pr-12 pl-12"
               >
                 ver portafolio
-                <v-icon class="ml-2">mdi-arrow-down</v-icon>
+                <v-icon class="ml-4">mdi-arrow-down</v-icon>
               </v-btn>
             </div>
           </div>
@@ -30,13 +30,13 @@
             <img
               src="../assets/img/p-img1.png"
               alt=""
-              width="60%"
+              width="55%"
               style="position: relative"
             />
           </div>
         </div>
       </div>
-    </div>
+    
   </section>
 </template>
 
@@ -106,6 +106,7 @@ export default {
 span.typed-text {
   color: #000;
   text-transform: uppercase;
+  font-size: 30px;
 }
 span.cursor {
   display: inline-block;
@@ -132,7 +133,7 @@ span.cursor.typing {
 
 <style>
 
-.background-i {
+/* .background-i {
   background: rgb(255, 153, 0);
   background: repeating-linear-gradient(
     143deg,
@@ -145,18 +146,33 @@ span.cursor.typing {
   position: relative;
   display: flex;
   justify-content: center;
+} */
+.background-i {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(147, 11, 238) 0%,
+    rgb(177, 177, 177) 65%
+  );
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 body.dark .background-i {
   background: rgb(0, 17, 255);
-  background: repeating-linear-gradient(
-    143deg,
+  background: linear-gradient(
+    90deg,
     rgba(0, 17, 255, 1) 0%,
     rgb(1, 238, 255) 65%
   );
 }
 .content-hero {
+  width: 90%;
   display: flex;
   align-items: center;
+  
 }
 .content {
   width: 80%;
@@ -182,7 +198,6 @@ body.dark .background-i {
   }
   .content {
     width: 90%;
-
     text-align: justify;
     display: flex;
     flex-direction: column;

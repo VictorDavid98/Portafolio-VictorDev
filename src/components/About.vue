@@ -3,11 +3,12 @@
     <div class="contenedor">
       <div class="content">
         <h1 style="font-size: 45px">Sobre Mi</h1>
-        <p>Hola! Recientemente egrese de ingeniería en informática en el instituto Duoc UC, Sede San Bernardo. Me gusta la programación y todo lo relacionado con la tecnología, aprendo algo nuevo cada día para así ser mejor profesional y mejor persona, con ello, poder enfrentar los desafios de hoy y del mañana. Mi visión en convertirme en programador Full-Stack. Me considero una persona comprometida, autónomo y dinámico.</p>
+        <p>
+          Mi portafolio web es una colección de mis mejores trabajos en diseño gráfico y desarrollo web. Incluye proyectos como diseño de logotipos, carteles publicitarios, sitios web y aplicaciones móviles que muestran mi creatividad y habilidades técnicas. Además, proporciona detalles sobre mi experiencia y conocimientos en herramientas y tecnologías relacionadas. Es una excelente herramienta para mostrar mi trabajo a potenciales clientes y empleadores, y para diferenciarme de la competencia.
+        </p>
       </div>
-      
-        <img src="../assets/img/img-sobre-mi.png" alt="" width="40%" />
-      
+
+      <img src="../assets/img/img-sobre-mi.png" alt="" width="40%" />
     </div>
   </div>
 </template>
@@ -18,39 +19,41 @@ export default {};
 
 <style scoped>
 .sobre-mi {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(147, 11, 238) 0%,
+    rgb(177, 177, 177) 65%
+  );
+ 
   width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
 }
-
+body.dark .sobre-mi {
+  background: rgb(0, 17, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 17, 255, 1) 0%,
+    rgb(1, 238, 255) 65%
+  );
+}
 
 .contenedor {
-  width: 90%;
+  width: 65%;
   display: flex;
   align-items: center;
-  background: rgb(255, 153, 0);
-  background: linear-gradient(
-    93deg,
-    rgba(255, 153, 0, 1) 0%,
-    rgba(255, 252, 42, 1) 100%
-  );
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   margin: 50px 50px;
-  padding: 20px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
-body.dark .contenedor {
-  background: rgb(7,0,255);
-background: linear-gradient(93deg, rgba(7,0,255,1) 0%, rgba(42,211,255,1) 100%);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
-}
-.content{
-  
-
+.content {
   margin: 0;
 }
-.content p{
-  font-size: 17px;
+.content p {
+  font-size: 19px;
 }
 
 @media screen and (max-width: 968px) {
